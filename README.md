@@ -38,6 +38,28 @@
     use: [
       require.resolve('style-loader'),
       // ...
+      {
+        loader: require.resolve('postcss-loader'),
+        options: {
+          // Necessary for external CSS imports to work
+          // https://github.com/facebookincubator/create-react-app/issues/2677
+          ident: 'postcss',
+          plugins: () => [
+            require('postcss-flexbugs-fixes'),
+            autoprefixer({
+              browsers: [
+                '>1%',
+                'last 4 versions',
+                'Firefox ESR',
+                'not ie < 9', // React doesn't support IE8 anyway
+              ],
+              flexbox: 'no-2009',
+            }),
+          ],
+          // ⚠️ 此处需设置开启 sourceMap 否则终端可能会弹出警告
+          sourceMap: true,
+        },
+      },
       // 新增 stylus
       require.resolve('stylus-loader'),
     ],
@@ -45,19 +67,5 @@
   ```
 
   完成代码修改过后，重启项目，修改 css 文件为 styl 文件，🎉项目正常运行。
-
-  正当我觉得一切正常的时候，我看到了 Terminal 里面有如下警告信息
-  ```
-  (Emitted value instead of an instance of Error) 
-
-    ⚠️  PostCSS Loader
-
-    Previous source map found, but options.sourceMap isn't set.
-    In this case the loader will discard the source map entirely for performance reasons.
-    See https://github.com/postcss/postcss-loader#sourcemap for more information.
-  ```
-  
-  TODO:
-  大意就是 sourceMap 无效，我想来应该和 postCSS 有关，晚点研究现在有点别的事情要做，研究完毕之后开始尝试方案二。 
 
 ## 🎉 开发后项目总结
