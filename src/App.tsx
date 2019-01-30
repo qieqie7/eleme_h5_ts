@@ -1,5 +1,7 @@
 import * as React from 'react';
-import './App.styl';
+import { locals } from './App.styl';
+// tslint:disable-next-line:no-console
+console.log(locals)
 
 import logo from './logo.svg';
 

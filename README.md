@@ -68,4 +68,38 @@
 
   完成代码修改过后，重启项目，修改 css 文件为 styl 文件，🎉项目正常运行。
 
+  #### 方案二
+
+  Sorry，明天去公司开一个分支，尝试对比两种方案的优劣。 😴
+
+- 开启 CSS-Module
+  
+  直接在 webpack 配置中开启 CSS-Module
+
+  ```
+  {
+    loader: require.resolve('css-loader'),
+    options: {
+      importLoaders: 1,
+      // 开启 CSS—Module
+      module: true,
+      // 更多配置，之后会添加，现只单纯开启 CSS-Module
+    },
+  },
+  ```
+
+  在页面中尝试使用
+
+  ```
+  import * as styles from './App.styl';
+  // ❌ 直接无法找到 ./App.styl 模块
+  ```
+
+  在 Google 的帮助下，需要将原先的 css-loader 替换成 typings-for-css-modules-loader。
+
+  typings-for-css-modules-loader 完全兼容 css-loader 。在使用 typings-for-css-modules-loader 过后，它会帮你自动生成一个 App.styl.d.ts 的声明文件，这个时候就可以开始正常的使用 CSS-Module 了。
+
+  TODO: 但是在项目中，目前无法正常使用，明天研究
+
+
 ## 🎉 开发后项目总结
