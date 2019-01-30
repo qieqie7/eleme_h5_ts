@@ -6,7 +6,7 @@
 
 - 基于 TS + React 进行前端开发
 - 使用 create-react-app ${projectName} --scripts-version=react-scripts-ts 进行项目初始化
-- 后端数据使用 MockJs 模拟，后期打算使用KOA搭建服务器替换 MockJS
+- 后端数据使用 MockJs 模拟，后期打算使用KOA搭建服务器替换 MockJS
 
 ## 🔨 开发中遇到问题
 
