@@ -20,7 +20,7 @@
   阅读了一些文档之后，我寻思有两种方案可以解决这个问题：
 
   1. 在 webpack 的配置中加入直接加入 stylus-loader 
-  2. create-react-app 提供了一个 postCSS 的 CSS 处理平台，上面提供了 stylus 相关的处理方案
+  2. create-react-app 提供了一个 postCSS 的 CSS 处理平台，上面提供了基于缩进书写 CSS 的代码风格，此处不做深究。
   
   #### 方案一
   1. 首页需要安装 stylus 相关的处理器
@@ -67,10 +67,6 @@
   ```
 
   完成代码修改过后，重启项目，修改 css 文件为 styl 文件，🎉项目正常运行。
-
-  #### 方案二
-
-  Sorry，明天去公司开一个分支，尝试对比两种方案的优劣。 😴
 
 - 开启 CSS-Module
   
