@@ -8,15 +8,7 @@
 - 使用 create-react-app ${projectName} --scripts-version=react-scripts-ts 进行项目初始化
 - 后端数据使用 MockJs 模拟，后期打算使用KOA搭建服务器替换 MockJS
 - CSS启用 CSS-module + stylus
-- JS 使用 Airbnb 的开发规范
-- 为git commit 添加钩子，检测JS代码规范
-- 项目的热加载
-- 测试使用Jest，目前研究尚欠，测试文件暂时搁置
 
-## 🔨 开发中遇到问题
-
-- 在 webpack 配置中加入 stylus
-  
   阅读了一些文档之后，我寻思有两种方案可以解决这个问题：
 
   1. 在 webpack 的配置中加入直接加入 stylus-loader 
@@ -68,7 +60,7 @@
 
   完成代码修改过后，重启项目，修改 css 文件为 styl 文件，🎉项目正常运行。
 
-- 开启 CSS-Module
+  开启 CSS-Module
   
   直接在 webpack 配置中开启 CSS-Module
 
@@ -99,5 +91,11 @@
 
   typings-for-css-modules-loader 完全兼容 css-loader 。在使用 typings-for-css-modules-loader 过后，它会帮你自动生成一个 App.styl.d.ts 的声明文件，这个时候就可以开始正常的使用 CSS-Module 了。
 
+- JS 使用 Airbnb 的开发规范
+- 为git commit 添加钩子，检测JS代码规范
+- 项目的热加载
+- 测试使用Jest，目前研究尚欠，测试文件暂时搁置
+
+## 🔨 开发中遇到问题
 
 ## 🎉 开发后项目总结
