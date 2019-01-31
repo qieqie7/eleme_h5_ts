@@ -109,7 +109,9 @@
       "react-app"
     ]
   },
-  "scripts": {
-    "precommit": "tslint src/**/*.tsx"
+  "husky": {
+    "hooks": {
+      "pre-commit": "tslint src/**/*.tsx"
+    }
   }
 }
