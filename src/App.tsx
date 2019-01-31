@@ -1,10 +1,15 @@
 import * as React from 'react';
-import styles from './App.styl';
+import * as styles from './App.styl';
 
 import logo from './logo.svg';
 
+const a = { 
+  b: 5,
+}
+
 class App extends React.Component {
   public render() {
+    const b= a.b;
     return (
       <div className={styles.app}>
         <header className={styles.appHeader}>
@@ -12,7 +17,7 @@ class App extends React.Component {
           <h1 className={styles.appTitle}>Welcome to React</h1>
         </header>
         <p className={styles.appIntro}>
-          To get started, edit <code>src/App.tsx</code> and save to reload.
+          To get started, edit <code>src/App.tsx</code> and save to reload. {b}
         </p>
       </div>
     );
