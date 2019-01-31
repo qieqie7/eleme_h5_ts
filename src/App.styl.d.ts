@@ -1,10 +1,6 @@
-export interface IAppStyl {
-  'App': string;
-  'AppLogo': string;
-  'App-logo-spin': string;
-  'AppHeader': string;
-  'AppTitle': string;
-  'AppIntro': string;
-}
-
-export const locals: IAppStyl;
+export const app: string;
+export const appLogo: string;
+export const appLogoSpin: string;
+export const appHeader: string;
+export const appTitle: string;
+export const appIntro: string;

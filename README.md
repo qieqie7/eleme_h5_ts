@@ -83,7 +83,11 @@
       importLoaders: 1,
       // 开启 CSS—Module
       module: true,
-      // 更多配置，之后会添加，现只单纯开启 CSS-Module
+      // 这个最好也开启，如果不开启无法正确提示属性，tslint还会报错。具体原因，希望有大神能指点。
+      namedExport: true,
+      camelCase: true,
+      minimize: true,
+      localIdentName: "[name]_[local]_[hash:base64:5]"
     },
   },
   ```
@@ -98,8 +102,6 @@
   在 Google 的帮助下，需要将原先的 css-loader 替换成 typings-for-css-modules-loader。
 
   typings-for-css-modules-loader 完全兼容 css-loader 。在使用 typings-for-css-modules-loader 过后，它会帮你自动生成一个 App.styl.d.ts 的声明文件，这个时候就可以开始正常的使用 CSS-Module 了。
-
-  TODO: 但是在项目中，目前无法正常使用，明天研究
 
 
 ## 🎉 开发后项目总结

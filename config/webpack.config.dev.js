@@ -177,6 +177,10 @@ module.exports = {
                 options: {
                   importLoaders: 1,
                   module: true,
+                  namedExport: true,
+                  camelCase: true,
+                  minimize: true,
+                  localIdentName: "[name]_[local]_[hash:base64:5]"
                 },
               },
               {
