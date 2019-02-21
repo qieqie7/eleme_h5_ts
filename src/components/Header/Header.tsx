@@ -1,12 +1,19 @@
 import * as React from 'react';
 
-import * as styles from './Header.styl';
+import logo from '../../asset/logo.webp'; // logo
+import * as styles from './Header.styl'; // styl css文件
 
 export default class Header extends React.PureComponent {
   public render() {
     return (
-      <header className={styles.header}>
-        <nav className={styles.logoBackground}>1</nav>
+      <header 
+        // className={styles.header}
+      >
+        <nav className={styles.logoBackground}>
+          <div className={styles.logoWrap}>
+            <img className={styles.logo} src={logo} />
+          </div>
+        </nav>
         <div className={styles.storeInfo}>
           <h2 className={styles.title}>
             正新鸡排·汉堡烤串(上海胶州路店)
